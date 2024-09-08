@@ -3,51 +3,51 @@
 
 <head>
     <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">    <title>Page Not Found - 404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404</title>
     <style>
 	  @font-face {
   font-family: 'K24KurdishBold-Bold';
   src: url('K24KurdishBold-Bold.woff' ) format('woff2');
 }
-	*{
-	font-family: 'K24KurdishBold-Bold';
-	
-}
+ 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+			font-family: 'K24KurdishBold-Bold';
         }
 
         body {
-            font-family: Arial, sans-serif;
+           font-family: 'K24KurdishBold-Bold';
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        header {
-            background-color: #0075bc;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
+         header {
+    background-color: #0075bc;
+    color: white;
+    padding: 10px 20px;
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 10px;
-        }
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        nav ul li {
-            margin-right: 10px;
-        }
+.logo img {
+    width: 70px;  
+    height: auto;
+}
 
-        nav ul li a {
-            color: #0075bc;
-            text-decoration: none;
-        }
+h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
 
+ 
         main {
             flex: 1;
             text-align: center;
@@ -194,17 +194,16 @@
 </head>
 
 <body>
-    <header>
-        <h1>RESOURCE NOT FOUND</h1>
-    </header>
+   <header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-afro-professional-doctor-png-image_10148632.png" alt="Logo">
+        </div>
+        <h1>DOCTOR AI</h1>
+    </div>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Search page</a></li>
-            <li><a href="#">Not found</a></li>
-        </ul>
-    </nav>
+     
 
     <main id="home" >
         <h2>Page Not Found</h2>
@@ -221,52 +220,21 @@
         </div>
     </main>
 
-<main id="ho" class="active">
+   <main id="ho"class="active">
     <h2>Profile Details</h2>
     <div class="profile-card">
-        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" 
-             alt="Profile Image" class="profile-img" onclick="showProfileCard()">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
         <div class="profile-info">
             <h3>حسین حەسەن</h3>
             <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
             <p><strong>مۆبایل :</strong>07829795597</p>
             <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
             <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
+             
         </div>
     </div>
-
-  <div class="profile-card">
-        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" 
-             alt="Profile Image" class="profile-img" onclick="showProfileCard()">
-        <div class="profile-info">
-            <h3>حسین حەسەن</h3>
-            <p><strong>ناونیشان : </strong> اسه</p>
-            <p><strong>مۆبایل :</strong>07829795597</p>
-            <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
-            <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
-        </div>
-    </div>
-	
-	  <div class="profile-card">
-        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" 
-             alt="Profile Image" class="profile-img" onclick="showProfileCard()">
-        <div class="profile-info">
-            <h3>حسین حەسەن</h3>
-            <p><strong>ناونیشان : </strong> سەساژ</p>
-            <p><strong>مۆبایل :</strong>07829795597</p>
-            <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
-            <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
-        </div>
-    </div>
-     <div class="info-card" id="infoCard" style="display: none;">
-        <h2>Profile Information</h2>
-        <p id="name"></p>
-        <p id="location"></p>
-        <p id="phone"></p>
-        <p id="condition"></p>
-        <p id="appointmentDays"></p>
-        <button onclick="closeProfileCard()">Close</button>
-    </div>
+ 
+	 
 </main>
 
 
@@ -274,21 +242,27 @@
         <div class="footer-menu">
             <div class="menu-item">
                 <a href="#" onclick="showSection('home')">
-                    <img src="https://www.freeiconspng.com/thumbs/phone-icon/phone-icon-png--clipart-best-17.png" alt="Send an inquiry" />
-                    <span>Send an inquiry</span>
+                    <img src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png" alt="Send an inquiry" />
+                    <span>سەرەکی</span>
                 </a>
             </div>
 			
             <div class="menu-item">
                 <a href="#" onclick="showSection('ho')">
-                    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678116-calendar-512.png" alt="Book appointment" />
-                    <span>Book appointment</span>
+                    <img src="https://cdn-icons-png.freepik.com/512/6870/6870436.png" alt="Book appointment" />
+                    <span>دکتۆرەکان</span>
                 </a>
             </div>
             <div class="menu-item">
                 <a href="#" onclick="showSection('doctor')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Find a doctor" />
-                    <span>Find a doctor</span>
+                    <img src="https://cdn-icons-png.freepik.com/512/1263/1263531.png" alt="Find a doctor" />
+                    <span>دەرمانەکان</span>
+                </a>
+            </div>
+			<div class="menu-item">
+                <a href="#" onclick="showSection('doctor')">
+                    <img src="https://cdn-icons-png.freepik.com/512/5209/5209964.png" alt="Find a doctor" />
+                    <span>تاقیگە</span>
                 </a>
             </div>
         </div>
@@ -297,32 +271,6 @@
         </div>
     </footer>
 
-
-<script>
-function showProfileCard() {
-    // Retrieve profile details
-    const name = document.querySelector(".profile-info h3").textContent;
-    const location = document.querySelector(".profile-info p:nth-child(2)").textContent;
-    const phone = document.querySelector(".profile-info p:nth-child(3)").textContent;
-    const condition = document.querySelector(".profile-info p:nth-child(4)").textContent;
-    const appointmentDays = document.querySelector(".profile-info p:nth-child(5)").textContent;
-
-    // Set the details to the info card
-    document.getElementById('name').textContent = name;
-    document.getElementById('location').textContent = location;
-    document.getElementById('phone').textContent = phone;
-    document.getElementById('condition').textContent = condition;
-    document.getElementById('appointmentDays').textContent = appointmentDays;
-
-    // Show the info card
-    document.getElementById('infoCard').style.display = 'block';
-}
-
-function closeProfileCard() {
-    // Hide the info card
-    document.getElementById('infoCard').style.display = 'none';
-}
-</script>
     <script>
         // Function to show the correct section and hide the others
         function showSection(sectionId) {
