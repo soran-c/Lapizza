@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-    <title>Page Not Found - 404</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">    <title>Page Not Found - 404</title>
     <style>
 	  @font-face {
   font-family: 'K24KurdishBold-Bold';
@@ -136,6 +135,10 @@
             .footer-menu {
                 flex-direction: row;
             }
+			
+ 
+ 
+ 
         }
 
         /* Initially hide all main sections */
@@ -152,7 +155,7 @@
     align-items: center;
     background-color: #f9f9f9;
     padding-top: 10px;
-    margin: 20px 0;
+    margin: 20px 0; 
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -161,25 +164,28 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-left: 22px; 
+    margin-right: -10px; 
    
 }
 
 .profile-info {
+
     flex: 1;
-	
+	font-size: 14px;
+	line-height: 1.3rem;
 }
 
 .profile-info h3 {
     margin-bottom: 10px;
     color: #0075bc;
+	
 	text-align: right;
 }
 
 .profile-info p {
     margin: 5px 0;
-    color: #666;
-	text-align: right;
+    color: #333;
+	text-align: right; 
 }
 
  
@@ -215,44 +221,51 @@
         </div>
     </main>
 
-   <main id="ho"class="active">
+<main id="ho" class="active">
     <h2>Profile Details</h2>
     <div class="profile-card">
-        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" 
+             alt="Profile Image" class="profile-img" onclick="showProfileCard()">
         <div class="profile-info">
             <h3>حسین حەسەن</h3>
             <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
             <p><strong>مۆبایل :</strong>07829795597</p>
             <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
             <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
-             
         </div>
     </div>
-	<div class="profile-card">
-        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
-        <div class="profile-info">
-            <h3>کاروان</h3>
-            <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
-            <p><strong>مۆبایل :</strong>07829795597</p>
-             
-        </div>
-    </div>
-	<div class="profile-card">
-        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
+
+  <div class="profile-card">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" 
+             alt="Profile Image" class="profile-img" onclick="showProfileCard()">
         <div class="profile-info">
             <h3>حسین حەسەن</h3>
-            <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
+            <p><strong>ناونیشان : </strong> اسه</p>
             <p><strong>مۆبایل :</strong>07829795597</p>
-             
+            <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
+            <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
         </div>
     </div>
-    <p>
-        We are eager to help you find what you are looking for.
-    </p>
-    <a href="#" class="home-button">→ Return to Home Page</a>
-    <div class="search-box">
-        <input type="text" placeholder="Enter search content...">
-        <button>Search</button>
+	
+	  <div class="profile-card">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" 
+             alt="Profile Image" class="profile-img" onclick="showProfileCard()">
+        <div class="profile-info">
+            <h3>حسین حەسەن</h3>
+            <p><strong>ناونیشان : </strong> سەساژ</p>
+            <p><strong>مۆبایل :</strong>07829795597</p>
+            <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
+            <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
+        </div>
+    </div>
+     <div class="info-card" id="infoCard" style="display: none;">
+        <h2>Profile Information</h2>
+        <p id="name"></p>
+        <p id="location"></p>
+        <p id="phone"></p>
+        <p id="condition"></p>
+        <p id="appointmentDays"></p>
+        <button onclick="closeProfileCard()">Close</button>
     </div>
 </main>
 
@@ -284,6 +297,32 @@
         </div>
     </footer>
 
+
+<script>
+function showProfileCard() {
+    // Retrieve profile details
+    const name = document.querySelector(".profile-info h3").textContent;
+    const location = document.querySelector(".profile-info p:nth-child(2)").textContent;
+    const phone = document.querySelector(".profile-info p:nth-child(3)").textContent;
+    const condition = document.querySelector(".profile-info p:nth-child(4)").textContent;
+    const appointmentDays = document.querySelector(".profile-info p:nth-child(5)").textContent;
+
+    // Set the details to the info card
+    document.getElementById('name').textContent = name;
+    document.getElementById('location').textContent = location;
+    document.getElementById('phone').textContent = phone;
+    document.getElementById('condition').textContent = condition;
+    document.getElementById('appointmentDays').textContent = appointmentDays;
+
+    // Show the info card
+    document.getElementById('infoCard').style.display = 'block';
+}
+
+function closeProfileCard() {
+    // Hide the info card
+    document.getElementById('infoCard').style.display = 'none';
+}
+</script>
     <script>
         // Function to show the correct section and hide the others
         function showSection(sectionId) {
