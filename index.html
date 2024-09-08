@@ -1,289 +1,309 @@
 <!DOCTYPE html>
-<html dir="rtl">
+<html lang="en" dir="rtl">
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404</title>
+    <style>
+	  @font-face {
+  font-family: 'K24KurdishBold-Bold';
+  src: url('K24KurdishBold-Bold.woff' ) format('woff2');
+}
+	*{
+	font-family: 'K24KurdishBold-Bold';
+	
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <title>  LA PIZZA </title>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        header {
+            background-color: #0075bc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
-  <!-- font awesome style -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 10px;
+        }
 
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+        nav ul li {
+            margin-right: 10px;
+        }
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+        nav ul li a {
+            color: #0075bc;
+            text-decoration: none;
+        }
 
+        main {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main h2 {
+            color: #0075bc;
+        }
+
+        main h1 {
+            font-size: 72px;
+            color: #0075bc;
+        }
+
+        main p {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #20b788;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .search-box {
+            margin-top: 30px;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-box button {
+            padding: 10px;
+            background-color: #0075bc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer-menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-item img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .footer-domain {
+            background-color: #ececec;
+            padding: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-menu {
+                flex-direction: row;
+            }
+        }
+
+        /* Initially hide all main sections */
+        main {
+            display: none;
+        }
+
+        /* Make the currently active section visible */
+        main.active {
+            display: block;
+        }
+		.profile-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding-top: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 22px; 
+   
+}
+
+.profile-info {
+    flex: 1;
+	
+}
+
+.profile-info h3 {
+    margin-bottom: 10px;
+    color: #0075bc;
+	text-align: right;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #666;
+	text-align: right;
+}
+
+ 
+
+    </style>
 </head>
 
 <body>
-
-  <div class="hero_area">
-    <div class="bg-box">
-      <img src="images/hero-bg.jpg" alt="">
-    </div>
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              LA PIZZA
-            </span>
-          </a>
-		  <div id="logo">
-           <img src="images/logo.png" width="70"></img>
-		   </div>
-        </nav>
-      </div>
+    <header>
+        <h1>RESOURCE NOT FOUND</h1>
     </header>
-	 
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 col-lg-6 ">
-                  <div class="detail-box">
-                    <h1>
-                      LA PIZZA
-                    </h1>
-                    <p>
-                     بەتامترین و ناوازەترین خواردنەکان لێر بەدەست بهێنە
-                    </p>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-        </div>
-        
-      </div>
 
-    </section>
-    <!-- end slider section -->
-  </div>
- 
-  <!-- food section -->
-<br>
-  <section class="food_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Our Menu
-        </h2>
-      </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search page</a></li>
+            <li><a href="#">Not found</a></li>
+        </ul>
+    </nav>
 
-      <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".burger">Burger</li>
-        <li data-filter=".pizza">Pizza</li>
-        <li data-filter=".pasta">Pasta</li>
-        <li data-filter=".fries">Fries</li>
-      </ul>
-
-      <div class="filters-content">
-        <div class="row grid">
-		
-		
-          <div class="col-sm-6 col-lg-4 all pizza">
-            <div class="box">
-              <div>
-                <div class="img-box">
-                  <img src="images/" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    
-                  </h5>
-                  <p>
-                     
-                  </p>
-                  <div class="options">
-                    <h6>
-                      $20
-                    </h6>
-                     
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-		  
-		  
-		  
-		  
-		</div>
-      </div>
-       
-    </div>
-  </section>
-
-  <!-- end food section -->
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container  ">
-
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                خزمەتگوزاریەکانمان
-              </h2>
-            </div>
-            <p>
-             لە خواردنگەکەمان باشترین خزمەتگوزاری پێشکەش دەکەین و گەیاندنمان هەیە بۆ هەموو شوێنێک، هەروەها گەیاندن بە خۆرایە
-            </p>
-             
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <!-- book section -->
-  <section class="book_section layout_padding">
-    <div class="container">
-       
-      <div class="row">
-        
-        <div class="col-md-10">
-          <div class="map_container">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3078.7402566718115!2d44.5465686!3d36.6445696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40042900331fe955%3A0x8fd26a86398d4fcd!2sLA%20PIZZA!5e1!3m2!1sen!2siq!4v1725409223112!5m2!1sen!2siq" width="900" height="550" style="border:0;" allowfullscreen="" ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end book section -->
- 
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              پەیوەندیکردن
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  سۆران پشت ناوچەی 2 بەرامبەر دایرەی تاپۆ
-                </span>
-              </a>
-              <a href="tel:+9647510016001" style="dir:ltr; ">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  0751&nbsp;001&nbsp;6001
-                </span>
-              </a>
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            
-             
-            <div class="footer_social">
-              <a href="" target="blank">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a> 
-              <a href="" target="blank">
-                <i class="fa fa-snapchat" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/l.a.pizza1/" target="blank">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a> 
-			  <a href="https://www.instagram.com/l.a.pizza1/" target="blank">
-               <i class="fab fa-tiktok "></i>
-              </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <h4>
-            کاتەکانی کردنەوە
-          </h4>
-          <p>
-           هەموورۆژێک
-          </p>
-          <p>
-            11 بەیانی تاکوو 2  شەو
-          </p>
-        </div>
-      </div>
-      <div class="footer-info">
+    <main id="home" >
+        <h2>Page Not Found</h2>
+        <h1>404</h1>
         <p>
-          مافی پارێزراوە &copy; <span id="displayYear"></span>  <a href="">LA PIZZA</a>
+            The page you are trying to access is not available on our website. We regret any inconvenience this may cause.
+            The page name may have changed, you may have encountered a broken link, or the URL may have been entered incorrectly.
+            Whatever the problem, we are eager to help you find what you are looking for.
         </p>
-		<p>
-          دیزاین &copy; <a href="https://www.facebook.com/ibrahimmm55" target="blank" style="color: yellow;">ابراهیم قادر</a>
-        </p>
-      </div>
+        <a href="#" class="home-button">→ Return to Home Page</a>
+        <div class="search-box">
+            <input type="text" placeholder="Enter search content...">
+            <button>Search</button>
+        </div>
+    </main>
+
+   <main id="ho"class="active">
+    <h2>Profile Details</h2>
+    <div class="profile-card">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
+        <div class="profile-info">
+            <h3>حسین حەسەن</h3>
+            <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
+            <p><strong>مۆبایل :</strong>07829795597</p>
+            <p><strong>جۆری نەخۆشی :</strong>هەناو</p>
+            <p><strong>رۆژی دانیشتن:</strong>دووشەمە و چوارشەمە</p>
+             
+        </div>
     </div>
-  </footer>
-  <!-- footer section -->
+	<div class="profile-card">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
+        <div class="profile-info">
+            <h3>کاروان</h3>
+            <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
+            <p><strong>مۆبایل :</strong>07829795597</p>
+             
+        </div>
+    </div>
+	<div class="profile-card">
+        <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
+        <div class="profile-info">
+            <h3>حسین حەسەن</h3>
+            <p><strong>ناونیشان : </strong> سەنتەر ئاسیا</p>
+            <p><strong>مۆبایل :</strong>07829795597</p>
+             
+        </div>
+    </div>
+    <p>
+        We are eager to help you find what you are looking for.
+    </p>
+    <a href="#" class="home-button">→ Return to Home Page</a>
+    <div class="search-box">
+        <input type="text" placeholder="Enter search content...">
+        <button>Search</button>
+    </div>
+</main>
 
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
 
+    <footer>
+        <div class="footer-menu">
+            <div class="menu-item">
+                <a href="#" onclick="showSection('home')">
+                    <img src="https://www.freeiconspng.com/thumbs/phone-icon/phone-icon-png--clipart-best-17.png" alt="Send an inquiry" />
+                    <span>Send an inquiry</span>
+                </a>
+            </div>
+			
+            <div class="menu-item">
+                <a href="#" onclick="showSection('ho')">
+                    <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678116-calendar-512.png" alt="Book appointment" />
+                    <span>Book appointment</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" onclick="showSection('doctor')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Find a doctor" />
+                    <span>Find a doctor</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-domain">
+            <p>vinmec.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to show the correct section and hide the others
+        function showSection(sectionId) {
+            // Get all main elements
+            const sections = document.querySelectorAll('main');
+            // Remove 'active' class from all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // Add 'active' class to the clicked section
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+        }
+
+        // Handle search functionality
+        document.querySelector('.search-box button').addEventListener('click', function () {
+            const query = document.querySelector('.search-box input').value;
+            alert('Searching for: ' + query);
+        });
+    </script>
 </body>
 
 </html>
