@@ -157,18 +157,34 @@ h1 {
             cursor: pointer;
         }
 
-        footer {
-            background-color: #f4f4f4;
-            padding: 10px 0;
-            text-align: center;
-        }
+       footer {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
 
-        .footer-menu {
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-			
-        }
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer-domain {
+    background-color: #0075bc;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-domain a {
+    text-decoration: none;
+    color: #fff;
+}
+
 
         .menu-item a {
             text-decoration: none;
@@ -183,18 +199,7 @@ h1 {
             height: 30px;
             margin-bottom: 5px;
         }
-
-        .footer-domain {
-            background-color: #0075bc;
-            padding: 10px;
-            font-size: 14px;
-            color: #fff;
-        }
-
-        .footer-domain a{
-            text-decoration: none;
-			color: #fff;
-        }
+ 
 
         @media screen and (max-width: 768px) {
             .footer-menu {
