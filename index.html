@@ -210,12 +210,12 @@ h1 {
                 flex-direction: row;
             }
 			
+ 
  #home img{ 
 		 width: 350px;
 		 padding: 20px 0 0 10px  ;
 		
 		}
- 
  
         }
 
@@ -236,12 +236,27 @@ h1 {
     margin: 20px 0; 
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}	
+.profile-cardd {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding-top: 10px;
+    margin: 20px 0; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin-right: 10px; 
+   
+}
+.profilee-img {
+    width: 150px;
+    height: 150px; 
     margin-right: 10px; 
    
 }
@@ -274,6 +289,35 @@ h1 {
  color: red;
  }
 
+
+@media screen and (max-width: 768px) {
+     
+    h1 {
+        font-size: 20px;
+       margin-left: 10px;
+		
+ 
+    }
+
+    .profile-cardd {
+        flex-direction: column;
+        text-align: center;
+		 
+    }
+ 
+}
+
+/* Responsive Layout - Mobile Devices */
+@media screen and (max-width: 480px) {
+    
+
+    main p {
+        font-size: 14px;
+        margin-inline-end: 5px;
+    }
+
+     
+}
     </style>
 </head>
 
@@ -289,7 +333,7 @@ h1 {
 
      
 
-    <main id="home" class="active">
+    <main id="home" >
          <p>
        بەخێربێن بۆ دکتۆر AI لە شاری سۆران 
 پلاتفۆرمی متمانەپێکراوی ئێوە بۆ دۆزینەوەی پزیشک، گەڕان بەدوای دەرمان، خزمەتگوزارییەکانی تاقیگە، و چاتی زیرەکیی AI.
@@ -327,10 +371,10 @@ h1 {
   
 </main>
 
- <main id="drug" >
+ <main id="drug" class="active">
     <h2>Profile Details</h2>
-    <div class="profile-card">
-        <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/AP/LO/EB/160457072/metolazone-tablet-5mg.png" alt="Profile Image" class="profile-img">
+    <div class="profile-cardd">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/AP/LO/EB/160457072/metolazone-tablet-5mg.png" alt="Profile Image" class="profilee-img">
         <div class="profile-info">
             <h4>Metolazone </h4> 
             <p><strong>ناوەکانی تر : </strong> Metenix,Zaroxolyn </p>
@@ -341,8 +385,8 @@ h1 {
         </div>
     </div> 
 	 
-	   <div class="profile-card">
-        <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/AT/TG/LE/24980544/oltrivin-oxy.jpg" alt="Profile Image" class="profile-img">
+	   <div class="profile-cardd">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/AT/TG/LE/24980544/oltrivin-oxy.jpg" alt="Profile Image" class="profilee-img">
         <div class="profile-info">
             <h4> oxymetazoline hydrochloride nasal solution</h4> 
             <p><strong>ناوەکانی تر : </strong> Duration,Nafrine,Afrine </p>
@@ -352,7 +396,7 @@ h1 {
              
         </div>
     </div>
-  
+  <br><br><br><br><br><br><br> 
 </main>
  <main id="lab" >
     <h2>Profile Details</h2>
