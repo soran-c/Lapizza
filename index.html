@@ -4,8 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found - 404</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MED Center</title>
     <style>
+	
+	@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+ 
+
+.social-container {
+  width: 250px;
+  margin: 10vh auto;
+  text-align: center;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  transition: all 265ms ease-out;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
 	  @font-face {
   font-family: 'K24KurdishBold-Bold';
   src: url('K24KurdishBold-Bold.woff' ) format('woff2');
@@ -28,7 +87,8 @@
          header {
     background-color: #0075bc;
     color: white;
-    padding: 10px 20px;
+    padding: -10px 10px;
+	
 }
 
 .header-content {
@@ -38,8 +98,11 @@
 }
 
 .logo img {
-    width: 70px;  
-    height: auto;
+    width: 90px;  
+    height: 100px;
+	padding-right: 10px;
+	padding-top: 30px;
+	margin-top: -30px;
 }
 
 h1 {
@@ -54,18 +117,14 @@ h1 {
             padding: 20px;
         }
 
-        main h2 {
-            color: #0075bc;
-        }
-
-        main h1 {
-            font-size: 72px;
-            color: #0075bc;
-        }
-
+         
         main p {
             margin-top: 20px;
-            color: #666;
+            color: #444; 
+			text-align: right;
+			 font-size: 17px;
+			 margin-inline-end: 12px;
+			 line-height: 1.6rem;
         }
 
         .home-button {
@@ -108,6 +167,7 @@ h1 {
             display: flex;
             justify-content: space-around;
             padding: 10px 0;
+			
         }
 
         .menu-item a {
@@ -125,10 +185,15 @@ h1 {
         }
 
         .footer-domain {
-            background-color: #ececec;
+            background-color: #0075bc;
             padding: 10px;
             font-size: 14px;
-            color: #666;
+            color: #fff;
+        }
+
+        .footer-domain a{
+            text-decoration: none;
+			color: #fff;
         }
 
         @media screen and (max-width: 768px) {
@@ -162,8 +227,9 @@ h1 {
 
 .profile-img {
     width: 150px;
-    height: 150px; 
-    margin-right: -10px; 
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 10px; 
    
 }
 
@@ -177,8 +243,12 @@ h1 {
 .profile-info h3 {
     margin-bottom: 10px;
     color: #0075bc;
-	
 	text-align: right;
+}
+.profile-info h4 {
+    margin-left: 10px;
+    color: #0075bc;
+	text-align: left;
 }
 
 .profile-info p {
@@ -198,30 +268,34 @@ h1 {
    <header>
     <div class="header-content">
         <div class="logo">
-            <img src="https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-afro-professional-doctor-png-image_10148632.png" alt="Logo">
+            <img src="logo.png" alt="Logo">
         </div>
-        <h1>DOCTOR AI</h1>
+        <h1>MED Center</h1>
     </div>
 </header>
 
      
 
-    <main id="home" >
-        <h2>Page Not Found</h2>
-        <h1>404</h1>
-        <p>
-            The page you are trying to access is not available on our website. We regret any inconvenience this may cause.
-            The page name may have changed, you may have encountered a broken link, or the URL may have been entered incorrectly.
-            Whatever the problem, we are eager to help you find what you are looking for.
-        </p>
-        <a href="#" class="home-button">→ Return to Home Page</a>
-        <div class="search-box">
-            <input type="text" placeholder="Enter search content...">
-            <button>Search</button>
-        </div>
+    <main id="home" class="active">
+         <p>
+       بەخێربێن بۆ دکتۆر AI لە شاری سۆران 
+پلاتفۆرمی متمانەپێکراوی ئێوە بۆ دۆزینەوەی پزیشک، گەڕان بەدوای دەرمان، خزمەتگوزارییەکانی تاقیگە، و چاتی زیرەکیی AI.
+
+	   </p>
+	   
+         <div class="social-container">
+    <ul class="social-icons">
+	<li><a href="https://www.facebook.com/ibrahimmm55/" target="blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/Ittz._ibo/" target="blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.snapchat.com/add/sulltan.ibrahim" target="blank"><i class="fa fa-snapchat-ghost"></i></a></li>
+        <li><a href="https://t.me/ibrahimiphone" target="blank"><i class="fa fa-telegram"></i></a></li>
+		
+    </ul>
+ 
+  </div>
     </main>
 
-   <main id="ho"class="active">
+   <main id="ho">
     <h2>Profile Details</h2>
     <div class="profile-card">
         <img src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Profile Image" class="profile-img">
@@ -242,8 +316,7 @@ h1 {
     <div class="profile-card">
         <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/AP/LO/EB/160457072/metolazone-tablet-5mg.png" alt="Profile Image" class="profile-img">
         <div class="profile-info">
-            <h3> </h3>
-            <p><strong>ناوی بازرگانی : </strong> Metolazone</p>
+            <h4>Metolazone </h4> 
             <p><strong>ناوەکانی تر : </strong> Metenix,Zaroxolyn </p>
             <p><strong>بەکارھێنان :</strong> بەکاردێت بۆ چارەسەرکردنی بەرزبوونەوەی پەستانی خوێن – نەخۆشی ئاوسانی گورچیلە – سستی دڵ – شکستی دڵ – ئاوسان بەھوی نەخۆشی جگەر – سستی گورچیلە</p>
             <p><strong> رێژە و شێوەی دەرمانەکە :</strong> حب : ١٠ mg – ٥ mg – ٢. ٥ mg </p>
@@ -255,8 +328,7 @@ h1 {
 	   <div class="profile-card">
         <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/AT/TG/LE/24980544/oltrivin-oxy.jpg" alt="Profile Image" class="profile-img">
         <div class="profile-info">
-            <h3> </h3>
-            <p><strong>ناوی بازرگانی : </strong> Metolazone</p>
+            <h4> oxymetazoline hydrochloride nasal solution</h4> 
             <p><strong>ناوەکانی تر : </strong> Duration,Nafrine,Afrine </p>
             <p><strong>بەکارھێنان :</strong> بەکاردێت بۆ چارەسەرکردنی بەرزبوونەوەی پەستانی خوێن – نەخۆشی ئاوسانی گورچیلە – سستی دڵ – شکستی دڵ – ئاوسان بەھوی نەخۆشی جگەر – سستی گورچیلە</p>
             <p><strong> رێژە و شێوەی دەرمانەکە :</strong> حب : ١٠ mg – ٥ mg – ٢. ٥ mg </p>
@@ -311,7 +383,7 @@ h1 {
             </div>
         </div>
         <div class="footer-domain">
-            <p>vinmec.com</p>
+            <p><span>مافی پارێزراوە بۆ </span> MED Center <span> دیزاین</span><a href=""> ابراهیم قادر </a></p>
         </div>
     </footer>
 
